@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
+import PlayerBar from './PlayerBar';
 
 class Album extends Component {
   constructor(props) {
@@ -54,7 +55,6 @@ class Album extends Component {
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
             <div id="release-info">
-              {this.state.album.releaseInfo}
               {this.state.album.year}
               {this.state.album.label}
             </div>
@@ -68,7 +68,7 @@ class Album extends Component {
           </colgroup>
           <tbody>
             {this.state.album.songs.map( (song, index) =>
-              <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
+              <tr className="song" key={index} onClick={ () => this.handleSongClick(song) } >
                 <td className="song-actions">
                   <button>
                     <span className="song-number">{index+1}</span>
@@ -83,6 +83,7 @@ class Album extends Component {
           }
           </tbody>
         </table>
+        <PlayerBar isPlaying={this.state.isPlaying ? 'ion-pause' : 'ion-play'} currentSong={this.state.currentSong}/>
       </section>
     );
   }
