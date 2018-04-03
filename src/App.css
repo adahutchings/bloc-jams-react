@@ -72,7 +72,7 @@ Will Fix the nav bar here, some questions for mentor
 
 /* LIBRARY SECTION */
 .library {
-
+  background-color: black;
 }
 
 .library img {
@@ -128,10 +128,12 @@ Will Fix the nav bar here, some questions for mentor
   padding: 0px 50px 0px 20px;
 }
 
-.album td.song-number {
+.song-number {
   color: #e50073;
 
 }
+
+
 
 
 i.icon-pink {
