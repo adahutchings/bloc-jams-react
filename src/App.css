@@ -1,28 +1,140 @@
 .App {
+  background-color: black;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+}
+
+.logo {
+  height: 150px;
+  /* center logo here */
+}
+
+.App header {
+  grid-area: header;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App nav {
+  padding: 40px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.App footer {
+  grid-area: footer;
+}
+
+
+/*
+Will Fix the nav bar here, some questions for mentor
+
+.App nav ul{
+  list-style-type: none;
+  margin: none;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+.App nav li {
+  float: center;
+}
+
+.App nav li {
+  color: white;
+  text-decoration: none;
+}
+
+.App nav li: hover {
   color: white;
 }
+*/
 
-.App-title {
-  font-size: 1.5em;
+
+/* LANDING SECTION */
+.landing {
+  color: #e50073;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
 }
 
-.App-intro {
-  font-size: large;
+.hero-title {
+  font-size: 75px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.landing h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.landing p {
+  font-style: italic;
+  font-size: 30px;
+}
+
+/* LIBRARY SECTION */
+.library {
+
+}
+
+.library img {
+  height: 300px;
+}
+
+.library #textGroups {
+  text-align: center;
+}
+
+.library #albumTitle {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+
+
+/* NOW PLAYING SECTION */
+
+.album img {
+  height: 400px;
+  float: left;
+  padding-left: 75px;
+  padding-right: 50px;
+}
+
+.album {
+  color: #e50073;
+  text-align: center;
+  align-content: center;
+}
+
+.album tbody {
+  text-align: left;
+
+}
+
+
+.album #playerBar {
+  text-align: ;
+
+}
+
+.album button {
+  background-color: black;
+  border: none;
+  padding-right: 20px;
+}
+
+.album td.song-title {
+  color: white;
+  padding: 0px 50px 0px 20px;
+}
+
+.album td.song-number {
+  color: #e50073;
+
+}
+
+
+i.icon-pink {
+  color: #e50073;
+
 }

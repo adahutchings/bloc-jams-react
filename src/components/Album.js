@@ -118,7 +118,7 @@ class Album extends Component {
     return (
       <section className='album'>
         <section id="album-info">
-          <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
+          <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
@@ -134,14 +134,19 @@ class Album extends Component {
             <col id="song-title-column" />
             <col id="song-duration-column" />
           </colgroup>
-          <tbody>
+          <tbody >
             {this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
                 <td className="song-actions">
                   <button>
                     <span className="song-number">{index+1}</span>
-                    <span className="ion-play"></span>
-                    <span className="ion-pause"></span>
+                    <span className={this.props.isPlaying}>
+                      if ({this.props.isPlaying} === true) {
+                        <i class="material-icons icon-pink">play_arrow</i>
+                      } else {
+                        <i class="material-icons icon-pink">pause</i>
+                      };
+                    </span>
                   </button>
                 </td>
                 <td className="song-title">{song.title}</td>
@@ -151,6 +156,7 @@ class Album extends Component {
           }
           </tbody>
         </table>
+        <div id= "playerBar">
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
@@ -164,6 +170,7 @@ class Album extends Component {
           formatTime={this.formatTime(this.state.currentTime)}
           formatDuration={this.formatTime(this.state.duration)}
         />
+        </div>
       </section>
     );
   }
