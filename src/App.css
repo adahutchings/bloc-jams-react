@@ -1,6 +1,10 @@
-.App {
-  background-color: black;
+body {
+  background-color: #313030;
   font-family: 'Amatic SC', cursive;
+  color: #e50073;
+}
+
+.App {
   font-size: 30px;
 }
 
@@ -10,43 +14,12 @@
 }
 
 .App header {
-  grid-area: header;
   text-align: center;
 }
 
 .App nav {
   padding: 40px;
 }
-
-.App footer {
-  grid-area: footer;
-}
-
-
-/*
-Will Fix the nav bar here, some questions for mentor
-
-.App nav ul{
-  list-style-type: none;
-  margin: none;
-  padding: 0;
-  overflow: hidden;
-
-}
-
-.App nav li {
-  float: center;
-}
-
-.App nav li {
-  color: white;
-  text-decoration: none;
-}
-
-.App nav li: hover {
-  color: white;
-}
-*/
 
 
 /* LANDING SECTION */
@@ -71,13 +44,15 @@ Will Fix the nav bar here, some questions for mentor
 }
 
 /* LIBRARY SECTION */
-.library {
-  background-color: black;
-}
 
 .library img {
   height: 300px;
+  border-radius: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 4px 4px 4px rgba(10, 10, 10, .5);
 }
+
 
 .library #textGroups {
   text-align: center;
@@ -94,49 +69,91 @@ Will Fix the nav bar here, some questions for mentor
 /* NOW PLAYING SECTION */
 
 .album img {
-  height: 400px;
-  float: left;
-  padding-left: 75px;
-  padding-right: 50px;
+  height: 300px;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 4px 4px 4px rgba(10, 10, 10, .5);
 }
 
-.album {
+
+#album-info {
+  float: left;
   color: #e50073;
   text-align: center;
   align-content: center;
 }
 
-.album tbody {
-  text-align: left;
-
+#playerBar {
+  text-align: center;
+  width: 300px;
+  padding: 0px 10px 0px 100px;
+  float: left;
 }
 
 
-.album #playerBar {
-  text-align: ;
+table#song-list {
+  text-align: left;
+  padding-left: 30px;
+  float: left;
+}
 
+.album #album-title {
+  font-size: 70px;
+  margin: 0px;
+}
+
+.album #artist {
+  font-size: 50px;
+  margin: -5px;
+}
+
+.album #release-info {
+  font-size: 20px;
 }
 
 .album button {
-  background-color: black;
+  background-color: #313030;
   border: none;
-  padding-right: 20px;
+  padding-right: 0px;
 }
 
-.album td.song-title {
+.song-title {
   color: white;
   padding: 0px 50px 0px 20px;
 }
 
+#song-number-column {
+  width: 30px;
+}
+
+#song-title-column {
+  width: 200px;
+}
+
 .song-number {
-  color: #e50073;
+color: #e50073;
 
 }
 
+/* ICON COLORS */
 
-
-
-i.icon-pink {
+.ion-play {
   color: #e50073;
+  font-size: 20px;
+}
 
+.ion-pause {
+  color: #e50073;
+  font-size: 20px;
+}
+
+.ion-skip-forward {
+  color: #e50073;
+  font-size: 20px;
+}
+
+.ion-skip-backward {
+  color: #e50073;
+  font-size: 20px;
 }
